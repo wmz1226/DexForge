@@ -1,0 +1,117 @@
+# ContactAware hyperparameters.
+# Lengths in metres, angles in radians unless the name says otherwise.
+
+
+io:
+  video_fps: 30
+  internal_fps: 480
+  max_frames: 0
+  subsample: 1
+
+object_contact:
+  # Scene variant: scene/<hand>/<object>_<scene>.xml. The simulator decides the target kind
+  # (gs: Gaussian spheres, sdf: triangle mesh) from the XML.
+  scene: gs
+  # 1: hard; 2-8: soft. GS uses the simulator's complete 1 mm support;
+  # mesh blends nearest triangle features.
+  contact_topk: 1
+  contact_distance_offset: 0.0
+
+contact_extraction:
+  contact_on_threshold: 0.01
+  contact_anchor_max_ref_penetration: 0.01
+  contact_track_deadband: 0.008
+  contact_track_min_stable_fraction: 0.80
+  contact_min_duration: 8
+  contact_switch_penalty_frames: 7
+  contact_score_percentile: 95.0
+  contact_run_max_gap: 3
+
+keys:
+  anchor_center_weight: 1.0
+  anchor_relative_weight: 1.0
+  force_closure_weight: 1.0
+  force_closure_friction: 0.2
+  force_closure_force_limit: 20.0
+  first_frame_correspondence_candidates: 3
+  first_frame_max_iterations: 10000
+  first_frame_ftol: 1.0e-04
+
+guidance:
+  contact_anchor_weight: 100.0
+  contact_normal_weight_scale: 1.0
+  contact_approach_seconds: 0.0
+  contact_release_seconds: 0.0
+  pad_min_axial: 0.0
+  pad_max_axial: 0.5
+  pad_min_palmar: 0.75
+  descriptor_axial_cost_weight: 4.0
+  descriptor_azimuth_cost_weight: 1.0
+
+tracking:
+  palm_position_weight: 10.0
+  palm_rotation_weight: 1.0
+  fingertip_weight: 1.0
+  mano_shape_weight: 0.5
+  base_translation_step_weight: 0.1
+  base_rotation_step_weight: 0.001
+  joint_step_weight: 0.001
+  base_translation_velocity_weight: 100.0
+  base_rotation_velocity_weight: 1.0
+  joint_velocity_weight: 1.0
+
+joint_trajectory:
+  trajectory_contact_position_multiplier: 100.0
+  trajectory_smoothing_seconds: 0.1
+  # Keys whose stable contacts miss their anchors by more than this are released like infeasible keys.
+  key_release_contact_error: 0.01
+
+collision:
+  safe_distance: 0.0
+  activation_distance: 0.010
+  gamma: 1.2
+  joint_gamma: 1.0
+  sphere_radius_scale: 1.0
+  hand_object_activation: 0.01
+  hand_object_safe_distance: 0.0
+  pre_contact_safe_distance: 0.005
+  hand_object_gamma: 1.0
+  hand_object_topk_per_link: 64
+  geometry_feasibility_tolerance_m: 1.0e-04
+  joint_limit_tolerance_rad: 1.0e-07
+
+qp:
+  tracking_relative_tolerance: 0.0001
+  # Key SQP and restoration stagnation patience; 0 disables those early exits.
+  sqp_stagnation_patience: 5
+  # Relative objective improvement required to reset patience.
+  sqp_progress_relative_tolerance: 0.01
+  min_hessian: 1.0e-06
+  qp_maxiter: 10000
+  qp_ftol: 1.0e-07
+  qp_absolute_tolerance: 1.0e-09
+  qp_relative_tolerance: 0.0
+  qp_validation_tolerance: 1.0e-07
+  base_translation_trust_m: 0.004
+  base_rotation_trust_rad: 0.05
+  joint_trust_rad: 0.08
+  base_align_iters: 40
+  base_align_step: 0.12
+
+ground:
+  sim_dt: 0.01
+  object_ground_margin: 0.0
+  object_ground_qp_reg: 1.0
+  object_ground_qp_smooth: 200.0
+  object_ground_qp_acc_smooth: 0.0
+  resting_min_seconds: 0.1
+  resting_max_seconds: 5.0
+  resting_stable_seconds: 0.3
+  resting_linear_velocity_threshold: 0.001
+  resting_angular_velocity_threshold: 0.01
+  resting_velocity_decay_rate: 20.0
+  resting_fail_on_timeout: false
+  # Settling uses contact_topk and contact_distance_offset from the main geometry.
+  object_trajectory_smooth_weight: 10.0
+  # Re-mount the virtual wrist per sequence so the saved trajectory stays away from Euler gimbal lock.
+  wrist_mount: true

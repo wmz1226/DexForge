@@ -1,0 +1,24 @@
+Repository Licensing Notice
+
+This repository contains materials under multiple licenses.
+
+1. Upstream MuJoCo Warp code
+
+The vendored MuJoCo Warp code in `comfree_warp/mujoco_warp/`, and any other files
+that are clearly identified as upstream or directly derived from that codebase,
+are distributed under the Apache License, Version 2.0. See
+`LICENSES/Apache-2.0.txt`.
+
+2. ComFree Core code
+
+The files in `comfree_warp/comfree_core/` are distributed under the ComFree Core
+Academic Research License in `comfree_warp/comfree_core/LICENSE`, except where a
+file states otherwise.
+
+3. Other third-party materials
+
+Some datasets, meshes, textures, models, and benchmark assets may be subject to
+separate license terms in their own directories or source distributions.
+
+This file is a repository-wide licensing notice only. It does not replace the
+license terms that apply to any specific subdirectory or file.

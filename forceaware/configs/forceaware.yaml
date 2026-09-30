@@ -1,0 +1,74 @@
+sequence:
+  hand: inspire
+  # Scene variant scene/<hand>/<object>_<scene>.xml; the simulator takes the collision target
+  # kind (gs: Gaussian spheres, sdf: triangle mesh) from the XML.
+  scene: gs
+  start: 0
+  hold_frame: -1
+  hold_seconds: 0.0
+simulator:
+  exec_backend: comfree
+  mpc_dt: 0.01
+  action_dt: 0.03
+  knot_dt: 0.06
+  exec_dt: 0.01
+  ref_dt: 0.03333333333333333
+contact_physics:
+  gs_distance_offset: 0.0
+  # 1: hard; 2-8: soft. GS uses complete support with a fixed 1 mm width;
+  # mesh blends the selected nearest triangle features.
+  contact_topk: 1
+optimizer:
+  horizon: 5
+  n_iter: 40
+  contact_dynamics: hard
+  lr_max: 0.0015
+  lr_min: 1.0e-05
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-08
+  grad_clip: 50.0
+  warm_shift_scale: 1.0
+  multistart_count: 64
+  multistart_seed: 0
+  multistart_init_std: 0.03
+  multistart_ctrl_std: 0.003
+  multistart_init_raw_limit: 0.5
+loss:
+  obj_pos: 1.0
+  obj_rot: 0.3
+  terminal: 2.0
+  reference_pose_scale: 100.0
+  init: 0.5
+  action_ref_base: 10.0
+  action_ref_base_rot: 3.0
+  action_ref_finger: 0.03
+  contact_robustness: 40.0
+  marked_query_pos: 1.0
+  finger_joint_collision: 100.0
+  soft_penetration: 15.0
+  penetration: 75.0
+smoothing:
+  enabled: true
+  control_velocity_weight: 1.0
+  control_acceleration_weight: 1.0
+  hand_state_weight: 1.0
+  control_velocity_base_position_scale: 10.0
+  control_velocity_base_rotation_scale: 3.0
+  control_velocity_finger_scale: 1.0
+  control_acceleration_base_position_scale: 50.0
+  control_acceleration_base_rotation_scale: 50.0
+  control_acceleration_finger_scale: 500.0
+contact:
+  marked_query_dist_mm: 10.0
+  marked_query_temp_mm: 1.0
+  age_ramp_frames: 0
+  target_phi: -0.004
+  penetration_limit: 0.008
+  finger_joint_surface_margin_mm: 2.0
+bounds:
+  init_base_pos: 0.05
+  init_base_rot: 0.16
+  init_finger: 0.24
+video:
+  fps: 30.0

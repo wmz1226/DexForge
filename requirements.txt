@@ -1,0 +1,14 @@
+# One Python 3.10 environment for ContactAware and ForceAware (torch 2.1 needs NumPy 1.x).
+numpy==1.26.4
+scipy==1.13.1
+torch==2.1.2
+warp-lang==1.15.0
+mujoco==3.6.0
+PyYAML==6.0.3
+clarabel==0.11.1
+quadprog==0.1.13
+plyfile==1.1.3
+trimesh==4.12.2
+imageio==2.37.3
+imageio-ffmpeg==0.6.0
+opencv-python-headless==4.11.0.86

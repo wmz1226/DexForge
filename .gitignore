@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venvs/
+.DS_Store
+*.log
+/data/**/retarget/
+/assets/mano/*.pkl
+/contactaware/.cache/
+
+/results/
+.ruff_cache/

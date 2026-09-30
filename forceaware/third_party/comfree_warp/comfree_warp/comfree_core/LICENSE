@@ -1,0 +1,85 @@
+ComFree Core Academic Research License v1.0
+
+Copyright (c) 2026 ASU IRIS
+All rights reserved.
+
+This license applies only to files located in `comfree_warp/comfree_core/`,
+except where a specific file states otherwise.
+
+Licensor Notice
+
+For purposes of notices, permissions, exceptions, or other communications under
+this license, "ASU IRIS" refers to the ASU IRIS lab and its Principal
+Investigator, Prof. Wanxin Jin, acting on behalf of the lab or other relevant
+rights holder as applicable.
+
+1. License Grant
+
+Subject to the terms of this license, ASU IRIS grants you a limited,
+non-exclusive, non-transferable, revocable license to use, reproduce, modify,
+and share the licensed ComFree Core files solely for noncommercial research,
+academic, educational, personal study, and internal evaluation purposes.
+
+2. No Commercial Use
+
+You may not use the licensed ComFree Core files, or any modified version of
+those files, for any commercial purpose without prior written approval from
+ASU IRIS.
+
+Commercial purpose includes, without limitation:
+- selling, licensing, sublicensing, leasing, or monetizing the licensed files;
+- using the licensed files in a commercial product or service;
+- using the licensed files to provide paid services, consulting, support, or
+  training;
+- using the licensed files in contract research or other work performed for a
+  commercial entity; or
+- using the licensed files for the benefit of a for-profit entity other than
+  internal noncommercial evaluation.
+
+3. No Patent Filing or Patent Rights
+
+No express or implied patent license is granted under this license.
+
+You may not use the licensed ComFree Core files, or modifications to them, to
+prepare, file, prosecute, maintain, or support any patent application or other
+intellectual property claim directed to the licensed files themselves or to
+methods, systems, or implementations substantially derived from them.
+
+4. Redistribution Conditions
+
+If you share the licensed ComFree Core files or permitted modifications for a
+permitted purpose, you must:
+- provide a copy of this license;
+- retain existing copyright, attribution, and notice text; and
+- clearly mark any modified files as changed.
+
+You may not sublicense the licensed ComFree Core files under different terms.
+
+5. Third-Party Code
+
+This license applies only to the licensed ComFree Core files.
+Third-party code and materials referenced by, imported by, or distributed
+elsewhere in this repository remain subject to their own license terms.
+
+6. Termination
+
+This license terminates automatically if you violate any term of it. Upon
+termination, you must stop using and distributing the licensed files.
+
+7. Disclaimer
+
+THE LICENSED FILES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+8. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ASU IRIS AND ITS CONTRIBUTORS WILL NOT
+BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM OR RELATED TO
+THIS LICENSE OR THE USE OF THE LICENSED FILES.
+
+9. Written Exceptions
+
+Any exception for commercial use or other restricted activity must be in a
+separate written agreement signed by ASU IRIS or Prof. Wanxin Jin acting for
+the ASU IRIS lab or other relevant rights holder as applicable.

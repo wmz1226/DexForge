@@ -1,0 +1,10 @@
+{
+  "source": "dexycb_mano_raw",
+  "dataset": "DexYCB",
+  "object": "004_sugar_box",
+  "hand_side": "right",
+  "camera": {
+    "fovy": 42.556570108446614
+  },
+  "input_description": "Reconstructed MANO and object-pose trajectories from the DexYCB Sugar Box sequence."
+}

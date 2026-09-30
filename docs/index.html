@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#fffcff">
+  <meta name="description" content="DexForge is a differentiable physics-grounded framework for converting human video demonstrations into high-fidelity robot trajectories.">
+  <meta name="author" content="Meizhong Wang, Ruiqi Ni, Kun Cao, Lihua Xie, Yiguang Hong">
+  <title>DexForge: High-Fidelity Physics-Informed Dexterous Retargeting</title>
+  <link rel="canonical" href="https://wmz1226.github.io/DexForge/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DexForge: High-Fidelity Physics-Informed Dexterous Retargeting">
+  <meta property="og:description" content="A differentiable physics-grounded framework for converting human demonstrations into high-fidelity robot trajectories.">
+  <meta property="og:url" content="https://wmz1226.github.io/DexForge/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg?v=cb354b55a6ec">
+  <link rel="stylesheet" href="assets/style.css?v=1473c5a2415f">
+  <script src="assets/results.js?v=8599dee1c0e2" defer></script>
+  <script src="assets/wall.js?v=35a0a541c93f" defer></script>
+  <script src="assets/app.js?v=0e4855e2f63b" defer></script>
+  <script src="assets/real-world.js?v=50cb6cf69cd1" defer></script>
+</head>
+<body>
+  <button id="motion-toggle" class="motion-toggle" type="button" aria-label="Pause videos" aria-pressed="false">Ⅱ</button>
+  <main>
+    <header class="project-header">
+      <h1><span class="project-name">DexForge</span><span class="project-subtitle">High-Fidelity Physics-Informed<br class="title-break"> Dexterous Retargeting</span></h1>
+      <p class="project-authors"><span>Meizhong Wang</span>, <span>Ruiqi Ni</span>, <span>Kun Cao</span>, <span>Lihua Xie</span>, <span>Yiguang Hong</span></p>
+      <nav class="project-actions" aria-label="Project links">
+        <a class="code-link" href="https://github.com/wmz1226/DexForge" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 5-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Retargeting Code</a>
+        <a class="results-link" href="#contactaware">Explore Results <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
+      </nav>
+    </header>
+    <section class="project-abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Human demonstrations offer rich examples of precise dexterous manipulation and a promising source of robot training data. However, high-fidelity reproduction of demonstrated motions and hand–object interactions across robot embodiments remains challenging under physical constraints. We present DexForge, a differentiable physics-grounded framework for converting human video demonstrations into high-fidelity robot trajectories. We reconstruct spherical-Gaussian object models and hand–object motion from visual observations, then build a differentiable simulator combining efficient Gaussian collision detection with existing differentiable dynamics. Based on this simulator, DexForge combines contact-aware kinematic retargeting with force-aware dynamics retargeting: robot-adapted stable contacts guide kinematic reference construction and subsequent gradient-based control refinement for precise physical motion reproduction. Experiments on 130 DexYCB and HOT3D demonstrations across seven dexterous hands show success-rate gains of approximately 35–53 percentage points over the baseline, with object position and orientation tracking errors on successful trajectories reduced by approximately 34–67% and 71–78%, respectively. Further experiments demonstrate open-loop transfer to MuJoCo and real-robot execution.</p>
+    </section>
+    <section id="method-overview" class="method-overview" aria-labelledby="method-title">
+      <h2 id="method-title">Method Overview</h2>
+      <figure>
+        <a class="pipeline-link" href="assets/pipeline.svg?v=1c33d8254a66" target="_blank" rel="noopener noreferrer" aria-label="Open the DexForge pipeline diagram at full size">
+          <img src="assets/pipeline.svg?v=1c33d8254a66" width="1200" height="506" loading="lazy" decoding="async" alt="DexForge pipeline: hand and spherical-Gaussian object reconstruction, robot-adapted contact refinement and kinematic retargeting, followed by differentiable control optimization and system identification.">
+        </a>
+        <figcaption>Overview of DexForge. (a) Hand and object reconstruction builds spherical Gaussian object models under RGB-D supervision and recovers hand–object motion from demonstration videos. (b) Contact-aware kinematic retargeting refines demonstrated contacts for robot reachability and contact stability, generating penetration-free references that track them. (c) Force-aware dynamics retargeting optimizes controls through simulation gradients in ComFree-GS, which combines efficient differentiable Gaussian collision detection with ComFree dynamics. System identification further reduces target-system mismatch to support high-fidelity physical reproduction.</figcaption>
+      </figure>
+    </section>
+    <section id="contactaware" data-stage="contactaware" aria-labelledby="contactaware-title">
+      <h2 id="contactaware-title">ContactAware</h2>
+      <div class="hand-tabs" role="tablist" aria-label="ContactAware hand"></div>
+      <div id="contactaware-panel" class="gallery-panel" role="tabpanel">
+        <div class="video-track" tabindex="0" aria-label="ContactAware videos"></div>
+        <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous videos">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide videos"><button type="button" data-slide="next" aria-label="Next videos">Next &nbsp;›</button><button type="button" class="expand-gallery" aria-expanded="false">Expand</button></div>
+      </div>
+    </section>
+    <section id="forceaware" data-stage="forceaware" aria-labelledby="forceaware-title">
+      <h2 id="forceaware-title">ForceAware</h2>
+      <div class="hand-tabs" role="tablist" aria-label="ForceAware hand"></div>
+      <div id="forceaware-panel" class="gallery-panel" role="tabpanel">
+        <div class="video-track" tabindex="0" aria-label="ForceAware videos"></div>
+        <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous videos">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide videos"><button type="button" data-slide="next" aria-label="Next videos">Next &nbsp;›</button><button type="button" class="expand-gallery" aria-expanded="false">Expand</button></div>
+      </div>
+    </section>
+    <section id="real-world" class="real-world-gallery" aria-labelledby="real-world-title">
+      <h2 id="real-world-title">Real-World Open-Loop Transfer</h2>
+      <div class="video-track real-video-track" tabindex="0" aria-label="Real-world open-loop transfer videos"></div>
+      <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous real-world video">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide real-world videos"><button type="button" data-slide="next" aria-label="Next real-world video">Next &nbsp;›</button></div>
+    </section>
+  </main>
+</body>
+</html>
