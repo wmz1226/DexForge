@@ -1,6 +1,6 @@
 # DexForge project website
 
-Static project page for DexForge, with ContactAware, ForceAware, and real-world demonstrations. The code link points to the retargeting implementation in this repository.
+Static project page for DexForge. Retargeting Result contains Highlight (reserved for future media), ContactAware, and ForceAware, followed by a separate real-world demonstration section. The code link points to the retargeting implementation in this repository.
 
 No build step or external dependencies are required. Preview from the repository root with `python -m http.server 8000`, then open `http://localhost:8000/docs/`.
 

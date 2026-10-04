@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://wmz1226.github.io/DexForge/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/mark.svg?v=cb354b55a6ec">
-  <link rel="stylesheet" href="assets/style.css?v=1473c5a2415f">
+  <link rel="stylesheet" href="assets/style.css?v=bed2e063154f">
   <script src="assets/results.js?v=8599dee1c0e2" defer></script>
   <script src="assets/wall.js?v=35a0a541c93f" defer></script>
   <script src="assets/app.js?v=0e4855e2f63b" defer></script>
@@ -31,7 +31,7 @@
       <p class="project-authors"><span>Meizhong Wang</span>, <span>Ruiqi Ni</span>, <span>Kun Cao</span>, <span>Lihua Xie</span>, <span>Yiguang Hong</span></p>
       <nav class="project-actions" aria-label="Project links">
         <a class="code-link" href="https://github.com/wmz1226/DexForge" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 5-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Retargeting Code</a>
-        <a class="results-link" href="#contactaware">Explore Results <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
+        <a class="results-link" href="#retargeting-results">Explore Results <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
       </nav>
     </header>
     <section class="project-abstract" aria-labelledby="abstract-title">
@@ -47,21 +47,27 @@
         <figcaption>Overview of DexForge. (a) Hand and object reconstruction builds spherical Gaussian object models under RGB-D supervision and recovers hand–object motion from demonstration videos. (b) Contact-aware kinematic retargeting refines demonstrated contacts for robot reachability and contact stability, generating penetration-free references that track them. (c) Force-aware dynamics retargeting optimizes controls through simulation gradients in ComFree-GS, which combines efficient differentiable Gaussian collision detection with ComFree dynamics. System identification further reduces target-system mismatch to support high-fidelity physical reproduction.</figcaption>
       </figure>
     </section>
-    <section id="contactaware" data-stage="contactaware" aria-labelledby="contactaware-title">
-      <h2 id="contactaware-title">ContactAware</h2>
-      <div class="hand-tabs" role="tablist" aria-label="ContactAware hand"></div>
-      <div id="contactaware-panel" class="gallery-panel" role="tabpanel">
-        <div class="video-track" tabindex="0" aria-label="ContactAware videos"></div>
-        <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous videos">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide videos"><button type="button" data-slide="next" aria-label="Next videos">Next &nbsp;›</button><button type="button" class="expand-gallery" aria-expanded="false">Expand</button></div>
-      </div>
-    </section>
-    <section id="forceaware" data-stage="forceaware" aria-labelledby="forceaware-title">
-      <h2 id="forceaware-title">ForceAware</h2>
-      <div class="hand-tabs" role="tablist" aria-label="ForceAware hand"></div>
-      <div id="forceaware-panel" class="gallery-panel" role="tabpanel">
-        <div class="video-track" tabindex="0" aria-label="ForceAware videos"></div>
-        <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous videos">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide videos"><button type="button" data-slide="next" aria-label="Next videos">Next &nbsp;›</button><button type="button" class="expand-gallery" aria-expanded="false">Expand</button></div>
-      </div>
+    <section id="retargeting-results" class="retargeting-results" aria-labelledby="retargeting-results-title">
+      <h2 id="retargeting-results-title">Retargeting Result</h2>
+      <section id="highlight" aria-labelledby="highlight-title">
+        <h3 id="highlight-title">Highlight</h3>
+      </section>
+      <section id="contactaware" data-stage="contactaware" aria-labelledby="contactaware-title">
+        <h3 id="contactaware-title">ContactAware</h3>
+        <div class="hand-tabs" role="tablist" aria-label="ContactAware hand"></div>
+        <div id="contactaware-panel" class="gallery-panel" role="tabpanel">
+          <div class="video-track" tabindex="0" aria-label="ContactAware videos"></div>
+          <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous videos">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide videos"><button type="button" data-slide="next" aria-label="Next videos">Next &nbsp;›</button><button type="button" class="expand-gallery" aria-expanded="false">Expand</button></div>
+        </div>
+      </section>
+      <section id="forceaware" data-stage="forceaware" aria-labelledby="forceaware-title">
+        <h3 id="forceaware-title">ForceAware</h3>
+        <div class="hand-tabs" role="tablist" aria-label="ForceAware hand"></div>
+        <div id="forceaware-panel" class="gallery-panel" role="tabpanel">
+          <div class="video-track" tabindex="0" aria-label="ForceAware videos"></div>
+          <div class="slider-controls"><button type="button" data-slide="previous" aria-label="Previous videos">‹&nbsp; Prev</button><input class="slide-range" type="range" min="0" max="1" step="any" value="0" aria-label="Slide videos"><button type="button" data-slide="next" aria-label="Next videos">Next &nbsp;›</button><button type="button" class="expand-gallery" aria-expanded="false">Expand</button></div>
+        </div>
+      </section>
     </section>
     <section id="real-world" class="real-world-gallery" aria-labelledby="real-world-title">
       <h2 id="real-world-title">Real-World Open-Loop Transfer</h2>
