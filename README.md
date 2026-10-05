@@ -16,6 +16,8 @@ actuator targets through two stages:
 Both stages share the bundled ComFree-Warp simulator, which supports mesh and
 Gaussian sphere (GS) geometry with hard or soft contact modes.
 
+[![DexForge pipeline: hand-object reconstruction, ContactAware retargeting, and ForceAware dynamics optimization.](docs/assets/pipeline.svg)](docs/assets/pipeline.svg)
+
 ## Setup
 
 Requires Linux, Python 3.10, an NVIDIA GPU, EGL, and a C++ compiler.
