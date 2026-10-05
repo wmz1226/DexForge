@@ -21,7 +21,9 @@
 </p>
 
 <p align="center">
-  <a href="https://wmz1226.github.io/DexForge/"><strong>Project Page</strong></a>
+  <a href="https://wmz1226.github.io/DexForge/">
+    <img src="https://img.shields.io/badge/Project-Page-blue?style=plastic&amp;logo=googlechrome&amp;logoColor=white" alt="Project Page">
+  </a>
 </p>
 
 <p align="center">
