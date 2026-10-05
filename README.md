@@ -4,6 +4,8 @@
 
 Meizhong Wang, Ruiqi Ni, Kun Cao, Lihua Xie, Yiguang Hong
 
+[![DexForge pipeline: hand-object reconstruction, ContactAware retargeting, and ForceAware dynamics optimization.](docs/assets/pipeline.svg)](docs/assets/pipeline.svg)
+
 [Project Page](https://wmz1226.github.io/DexForge/)
 
 This repository contains the **retargeting component** of DexForge. It converts
@@ -15,8 +17,6 @@ actuator targets through two stages:
 
 Both stages share the bundled ComFree-Warp simulator, which supports mesh and
 Gaussian sphere (GS) geometry with hard or soft contact modes.
-
-[![DexForge pipeline: hand-object reconstruction, ContactAware retargeting, and ForceAware dynamics optimization.](docs/assets/pipeline.svg)](docs/assets/pipeline.svg)
 
 ## Setup
 
