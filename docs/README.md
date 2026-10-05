@@ -2,7 +2,7 @@
 
 Static project page for DexForge. Retargeting Result contains ContactAware and ForceAware, followed by a separate real-world demonstration section. The code link points to the retargeting implementation in this repository.
 
-The author header includes numbered affiliations and identifies Kun Cao as the corresponding author. Ruiqi Ni's affiliation is omitted pending confirmation. Logos in `assets/affiliations/` come from the official [Tongji University](https://xxgk.tongji.edu.cn/index.php?classid=3080&newsid=6829&t=show), [SRIAS](https://srias.tongji.edu.cn/), and [NTU Singapore](https://www.ntu.edu.sg/) websites and retain their respective owners' rights. The SRIAS image is displayed without its website decoration using CSS; the source image is unchanged.
+The author header includes numbered affiliations (1: Tongji University; 2: Shanghai Research Institute for Intelligent Autonomous Systems; 3: Purdue University; 4: Nanyang Technological University, Singapore) and identifies Kun Cao as the corresponding author. Logos in `assets/affiliations/` come from the official [Tongji University](https://xxgk.tongji.edu.cn/index.php?classid=3080&newsid=6829&t=show), [SRIAS](https://srias.tongji.edu.cn/), [Purdue University](https://www.purdue.edu/brand-studio/brand/logos-usage/), and [NTU Singapore](https://www.ntu.edu.sg/) websites and retain their respective owners' rights. The SRIAS image is displayed without its website decoration using CSS; the source image is unchanged.
 
 No build step or external dependencies are required. Preview from the repository root with `python -m http.server 8000`, then open `http://localhost:8000/docs/`.
 

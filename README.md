@@ -1,12 +1,34 @@
-# DexForge
+<h1 align="center">DexForge: High-Fidelity Physics-Informed Dexterous Retargeting</h1>
 
-**High-Fidelity Physics-Informed Dexterous Retargeting**
+<p align="center">
+  <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=oElJeMUAAAAJ">Meizhong Wang</a><sup>1</sup>,
+  <a href="https://ruiqini.github.io/">Ruiqi Ni</a><sup>3</sup>,
+  <a href="https://ntu-caokun.github.io/">Kun Cao</a><sup>1,2,*</sup>,
+  <a href="https://personal.ntu.edu.sg/elhxie/">Lihua Xie</a><sup>4</sup>,
+  <a href="https://scholar.google.com/citations?user=QUTN3IwAAAAJ&amp;hl=zh-CN">Yiguang Hong</a><sup>1,2</sup>
+</p>
 
-[Meizhong Wang](https://scholar.google.com/citations?hl=zh-CN&user=oElJeMUAAAAJ), [Ruiqi Ni](https://ruiqini.github.io/), [Kun Cao](https://ntu-caokun.github.io/), [Lihua Xie](https://personal.ntu.edu.sg/elhxie/), [Yiguang Hong](https://scholar.google.com/citations?user=QUTN3IwAAAAJ&hl=zh-CN)
+<p align="center">
+  <sup>1</sup> Tongji University &nbsp;&nbsp;
+  <sup>2</sup> Shanghai Research Institute for Intelligent Autonomous Systems<br>
+  <sup>3</sup> Purdue University &nbsp;&nbsp;
+  <sup>4</sup> Nanyang Technological University, Singapore
+</p>
 
-[![DexForge pipeline: hand-object reconstruction, ContactAware retargeting, and ForceAware dynamics optimization.](docs/assets/pipeline.svg)](docs/assets/pipeline.svg)
+<p align="center">
+  <sup>*</sup> Corresponding author: <a href="https://ntu-caokun.github.io/">Kun Cao</a>
+  (<a href="mailto:caokun@tongji.edu.cn">caokun@tongji.edu.cn</a>)
+</p>
 
-[Project Page](https://wmz1226.github.io/DexForge/)
+<p align="center">
+  <a href="https://wmz1226.github.io/DexForge/"><strong>Project Page</strong></a>
+</p>
+
+<p align="center">
+  <a href="docs/assets/pipeline.svg">
+    <img src="docs/assets/pipeline.svg" width="100%" alt="DexForge pipeline: hand-object reconstruction, ContactAware retargeting, and ForceAware dynamics optimization.">
+  </a>
+</p>
 
 This repository contains the **retargeting component** of DexForge. It converts
 prepared MANO hand-object demonstrations into robot hand trajectories and
