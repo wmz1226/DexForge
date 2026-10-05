@@ -2,7 +2,7 @@
 
 **High-Fidelity Physics-Informed Dexterous Retargeting**
 
-Meizhong Wang, [Ruiqi Ni](https://ruiqini.github.io/), [Kun Cao](https://ntu-caokun.github.io/), [Lihua Xie](https://personal.ntu.edu.sg/elhxie/), Yiguang Hong
+[Meizhong Wang](https://scholar.google.com/citations?hl=zh-CN&user=oElJeMUAAAAJ), [Ruiqi Ni](https://ruiqini.github.io/), [Kun Cao](https://ntu-caokun.github.io/), [Lihua Xie](https://personal.ntu.edu.sg/elhxie/), [Yiguang Hong](https://scholar.google.com/citations?user=QUTN3IwAAAAJ&hl=zh-CN)
 
 [![DexForge pipeline: hand-object reconstruction, ContactAware retargeting, and ForceAware dynamics optimization.](docs/assets/pipeline.svg)](docs/assets/pipeline.svg)
 
